@@ -16,6 +16,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/UIScripts/ShipInfoSpeed.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ShipScripts/MainGunTracking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ShipScripts/ShipMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UIScripts/CameraTrack.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -27,6 +28,7 @@
         <option value="$PROJECT_DIR$/Assets/ShipScripts/MainGunFire.cs" />
         <option value="$PROJECT_DIR$/Assets/UIScripts/ShipInfoSpeed.cs" />
         <option value="$PROJECT_DIR$/Assets/ShipScripts/MainGunTracking.cs" />
+        <option value="$PROJECT_DIR$/Assets/UIScripts/CameraTrack.cs" />
         <option value="$PROJECT_DIR$/Assets/ShipScripts/ShipMovement.cs" />
       </list>
     </option>
@@ -85,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567544556739</updated>
       <workItem from="1567544562797" duration="5686000" />
-      <workItem from="1567568820031" duration="6896000" />
+      <workItem from="1567568820031" duration="9377000" />
     </task>
     <servers />
   </component>

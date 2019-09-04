@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
@@ -55,25 +56,25 @@ public class ShipMovement : MonoBehaviour
 
         if (shipgear == 2)
         {
-            transform.Translate(Vector3.up * Time.deltaTime * 1);
+            transform.Translate(Vector3.up * Time.deltaTime * (float) 1.5);
             print("Ship 1/4 Speed Ahead");
         }
 
         if (shipgear == 3)
         {
-            transform.Translate(Vector3.up * Time.deltaTime * 2);
+            transform.Translate(Vector3.up * Time.deltaTime * 3);
             print("Ship 1/2 Speed Ahead");
         }
 
         if (shipgear == 4)
         {
-            transform.Translate(Vector3.up * Time.deltaTime * 3);
+            transform.Translate(Vector3.up * Time.deltaTime * (float) 4.5);
             print("Ship 3/4 Speed Ahead");
         }
 
         if (shipgear == 5)
         {
-            transform.Translate(Vector3.up * Time.deltaTime * 5);
+            transform.Translate(Vector3.up * Time.deltaTime * 6);
             print("Ship Flank Ahead");
         }
 
@@ -122,6 +123,15 @@ public class ShipMovement : MonoBehaviour
             }
         }
     }
+
+ /*   void OnCollisionEnter(Collision targetObj) //trying to measure collision with an object
+    {
+        if (targetObj.gameObject.tag == "Islands")
+        {
+             transform.Translate(Vector3.up * Time.deltaTime * 0);
+             print("Collided with an object");
+        }
+    } */
 }
 
 //largely compiled from information on unity reference documents for moving an object and taking a key press, works well
