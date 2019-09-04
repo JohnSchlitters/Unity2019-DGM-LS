@@ -5,6 +5,15 @@ using UnityEngine.Events;
 
 public class MainGunTracking : MonoBehaviour
 {
+    public GameObject bulletPrefab;
+
+    public float shellSpeed = 80.0f;
+
+    void Start()
+    {
+        //  Cursor.visible = false;
+    }
+
     void Update()
     {
         //rotation of object
@@ -17,5 +26,9 @@ public class MainGunTracking : MonoBehaviour
         float angle = Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         //https://answers.unity.com/questions/10615/rotate-objectweapon-towards-mouse-cursor-2d.html
+        if (Input.GetMouseButtonDown(0))
+        {
+        }
     }
 }
+          

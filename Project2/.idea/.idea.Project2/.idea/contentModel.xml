@@ -6,8 +6,8 @@
     <e p="C:\Users\John\Documents\GitKraken\UnityGit\Unity2019-DGM-LS\Project2" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Crosshair_FollowMouse.cs" t="Include" />
         <e p="ShipScripts" t="Include">
+          <e p="MainGunFire.cs" t="Include" />
           <e p="MainGunTracking.cs" t="Include" />
         </e>
         <e p="TestScript.cs" t="Include" />
