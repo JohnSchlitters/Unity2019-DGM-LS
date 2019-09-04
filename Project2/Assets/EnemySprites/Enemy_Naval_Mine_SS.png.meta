@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: 81881b09e7cb3df42b1e7ae178987ac9
+guid: 439d180b94b146a44b39bf9a41824967
 TextureImporter:
   fileIDToRecycleName:
-    21300000: 4.7In_MkXXTurret_0
-    21300002: 4.7In_MkXXTurret_1
+    21300000: Enemy_Naval_Mine_SS_0
+    21300002: Enemy_Naval_Mine_SS_1
+    21300004: Enemy_Naval_Mine_SS_2
+    21300006: Enemy_Naval_Mine_SS_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -45,8 +47,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.34375, y: 0.4998375}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -86,41 +88,81 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4.7In_MkXXTurret_0
+      name: Enemy_Naval_Mine_SS_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 5
-        width: 28
+        x: 5
+        y: 37
+        width: 22
         height: 22
-      alignment: 9
-      pivot: {x: 0.3, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d731e7d5795f9e1499e738f16b3b7012
+      spriteID: 5d61c161321cee54eac28ff4b18dbd9c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4.7In_MkXXTurret_1
+      name: Enemy_Naval_Mine_SS_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 5
-        width: 29
+        x: 37
+        y: 37
+        width: 22
         height: 22
-      alignment: 9
-      pivot: {x: 0.3, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c6fa0dbb5d143b41a1b00f3d749915b
+      spriteID: 6ee5b59da09ccda43bfe52c4cadf2776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Naval_Mine_SS_2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db4a99fb3b692d4da6f9de2da7b5545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Naval_Mine_SS_3
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab40bdbdd5ad044ebc17ceea2f00ece
       vertices: []
       indices: 
       edges: []
@@ -128,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 494fc0c11867ba147a011e7579dee402
+    spriteID: e955c6fa08858964eaad4311a1ef1a54
     vertices: []
     indices: 
     edges: []

@@ -5,9 +5,6 @@ using UnityEngine.Events;
 
 public class MainGunTracking : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-
-    public float shellSpeed = 80.0f;
 
     void Start()
     {
