@@ -1073,7 +1073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4675ae5a8ebc94498b5d0f1a33c899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipPosition: {x: 0, y: 5, z: -30}
+  shipPosition: {x: 0, y: 5, z: -27}
   trackTarget: {fileID: 1816081458}
 --- !u!1 &1523182363
 GameObject:
@@ -1394,7 +1394,7 @@ Transform:
   m_GameObject: {fileID: 1816081456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -19.6, z: -1}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 4.5, y: 4.5, z: 4.5}
   m_Children:
   - {fileID: 1946410194}
   - {fileID: 895849688}
