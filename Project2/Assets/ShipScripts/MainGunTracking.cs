@@ -1,16 +1,24 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class MainGunTracking : MonoBehaviour
 {
+    [SerializeField]
+    private Transform playerGunBarrel;
+    [SerializeField]
+    private GameObject firedShell;
+    
+    public Text uiShipReloadStatus;
 
+    public bool playerArtilleryReload;
+    public AudioClip playerGunFire;
     void Start()
     {
-        //  Cursor.visible = false;
+        //  Cursor.visible = false; interferes with reticle
+        print("starting gun tracking");
+        playerArtilleryReload = false;
     }
-//to do: fix gun tracking to respect ship rotation
     void Update()
     {
         //rotation of object
@@ -29,7 +37,37 @@ public class MainGunTracking : MonoBehaviour
         //https://answers.unity.com/questions/10615/rotate-objectweapon-towards-mouse-cursor-2d.html
         if (Input.GetMouseButtonDown(0))
         {
+            if (playerArtilleryReload) //check if the ship can fire
+            {
+                print("gun battery reloading"); //cannot fire if reloading
+            }
+            else
+            {
+                StartCoroutine(ReloadFunction());
+                playerArtilleryReload = true; //set on reload
+            }
+
         }
     }
+    private void FirePlayerArtillery() //fire ship gun
+    {
+        GameObject firedArtillery = Instantiate(firedShell, playerGunBarrel.position, playerGunBarrel.rotation);
+        firedArtillery.GetComponent<Rigidbody2D>().velocity = playerGunBarrel.right * 50f;
+        //god bless this man
+        //https://www.youtube.com/watch?v=01HVr1fp7pU
+        AudioSource.PlayClipAtPoint(playerGunFire, transform.position);
+
+    }
+
+    public IEnumerator ReloadFunction() //reload ship gun to prevent spamming
+    {
+        float firingdelay = Random.Range(0.05f, 0.2f);
+        yield return new WaitForSeconds(firingdelay);
+        FirePlayerArtillery(); //start firing function
+        uiShipReloadStatus.text = "Main Battery : Reloading";
+        yield return new WaitForSeconds(4);
+        playerArtilleryReload = false;
+        uiShipReloadStatus.text = "Main Battery : Ready to Fire!";
+        print("ready to fire main battery");
+    }
 }
-          

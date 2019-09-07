@@ -3,7 +3,10 @@ guid: 0b477f7424e035b4aba7db7490627ebc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerGunBarrel: {instanceID: 0}
+  - firedShell: {fileID: 7014672956116032394, guid: c873ced3c45ee7e4b8d770b42b71b7f2,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

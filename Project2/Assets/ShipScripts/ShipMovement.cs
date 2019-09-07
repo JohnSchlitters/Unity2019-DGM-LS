@@ -41,40 +41,32 @@ public class ShipMovement : MonoBehaviour
                 shipgear -= 1;
             }
 
-        if (shipgear == 0)
+        switch (shipgear)
         {
-            transform.Translate(Vector3.down * Time.deltaTime * 1);
-            print("Ship Full Reverse");
-        }
-
-        if (shipgear == 1)
-        {
-            transform.Translate(Vector3.up * Time.deltaTime * 0);
-            print("Ship Full Stop");
-        }
-
-        if (shipgear == 2)
-        {
-            transform.Translate(Vector3.up * Time.deltaTime * (float) 1.5);
-            print("Ship 1/4 Speed Ahead");
-        }
-
-        if (shipgear == 3)
-        {
-            transform.Translate(Vector3.up * Time.deltaTime * 3);
-            print("Ship 1/2 Speed Ahead");
-        }
-
-        if (shipgear == 4)
-        {
-            transform.Translate(Vector3.up * Time.deltaTime * (float) 4.5);
-            print("Ship 3/4 Speed Ahead");
-        }
-
-        if (shipgear == 5)
-        {
-            transform.Translate(Vector3.up * Time.deltaTime * 6);
-            print("Ship Flank Ahead");
+            case 0:
+                transform.Translate(Vector3.down * Time.deltaTime * 1);
+                print("Ship Full Reverse");
+                break;
+            case 1:
+                transform.Translate(Vector3.up * Time.deltaTime * 0);
+                print("Ship Full Stop");
+                break;
+            case 2:
+                transform.Translate(Vector3.up * Time.deltaTime * (float) 1.5);
+                print("Ship 1/4 Speed Ahead");
+                break;
+            case 3:
+                transform.Translate(Vector3.up * Time.deltaTime * 3);
+                print("Ship 1/2 Speed Ahead");
+                break;
+            case 4:
+                transform.Translate(Vector3.up * Time.deltaTime * (float) 4.5);
+                print("Ship 3/4 Speed Ahead");
+                break;
+            case 5:
+                transform.Translate(Vector3.up * Time.deltaTime * 6);
+                print("Ship Flank Ahead");
+                break;
         }
 
         if (shipgear > 5)
@@ -84,41 +76,43 @@ public class ShipMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            if (shipgear == 1)
+            switch (shipgear)
             {
-                transform.Rotate(Vector3.forward * Time.deltaTime * 0); //stationary ship cannot turn
-            }
-            if (shipgear == 2 || shipgear == 3)
-            {
-                transform.Rotate(Vector3.forward * Time.deltaTime * 6); //turn left, slightly faster
-            }
-            if (shipgear == 4 || shipgear == 5)
-            {
-                transform.Rotate(Vector3.forward * Time.deltaTime * 4); //turn left
-            }
-            if (shipgear == 0)
-            {
-                transform.Rotate(Vector3.back * Time.deltaTime * 2); //turn right, ship is in reverse
+                case 1:
+                    transform.Rotate(Vector3.forward * Time.deltaTime * 0); //stationary ship cannot turn
+                    break;
+                case 2:
+                case 3:
+                    transform.Rotate(Vector3.forward * Time.deltaTime * 6); //turn left, slightly faster
+                    break;
+                case 4:
+                case 5:
+                    transform.Rotate(Vector3.forward * Time.deltaTime * 4); //turn left
+                    break;
+                case 0:
+                    transform.Rotate(Vector3.back * Time.deltaTime * 2); //turn right, ship is in reverse
+                    break;
             }
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            if (shipgear == 1)
+            switch (shipgear)
             {
-                transform.Rotate(Vector3.back * Time.deltaTime * 0); //stationary ship cannot turn
-            }
-            if (shipgear == 2 || shipgear == 3)
-            {
-                transform.Rotate(Vector3.back * Time.deltaTime * 6); //turn right, slightly faster
-            }
-            if (shipgear == 4 || shipgear == 5)
-            {
-                transform.Rotate(Vector3.back * Time.deltaTime * 4); //turn right
-            }
-            if (shipgear == 0)
-            {
-                transform.Rotate(Vector3.forward * Time.deltaTime * 2); //turn left, ship is in reverse
+                case 1:
+                    transform.Rotate(Vector3.back * Time.deltaTime * 0); //stationary ship cannot turn
+                    break;
+                case 2:
+                case 3:
+                    transform.Rotate(Vector3.back * Time.deltaTime * 6); //turn right, slightly faster
+                    break;
+                case 4:
+                case 5:
+                    transform.Rotate(Vector3.back * Time.deltaTime * 4); //turn right
+                    break;
+                case 0:
+                    transform.Rotate(Vector3.forward * Time.deltaTime * 2); //turn left, ship is in reverse
+                    break;
             }
         }
     }
