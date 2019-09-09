@@ -13,6 +13,7 @@ public class MainGunTracking : MonoBehaviour
 
     public bool playerArtilleryReload;
     public AudioClip playerGunFire;
+    public float playerReloadTime = 4.0f;
     void Start()
     {
         //  Cursor.visible = false; interferes with reticle
@@ -61,13 +62,28 @@ public class MainGunTracking : MonoBehaviour
 
     public IEnumerator ReloadFunction() //reload ship gun to prevent spamming
     {
-        float firingdelay = Random.Range(0.05f, 0.2f);
-        yield return new WaitForSeconds(firingdelay);
-        FirePlayerArtillery(); //start firing function
-        uiShipReloadStatus.text = "Main Battery : Reloading";
-        yield return new WaitForSeconds(4);
-        playerArtilleryReload = false;
-        uiShipReloadStatus.text = "Main Battery : Ready to Fire!";
-        print("ready to fire main battery");
+        if (playerReloadTime == 0)
+        {
+            uiShipReloadStatus.text = "Main Battery : Ready to Fire!";
+            print("ready to fire main battery");
+        }
+        {
+            FirePlayerArtillery(); //start firing function
+            uiShipReloadStatus.text = "Main Battery : Reloading";
+            yield return new WaitForSeconds(playerReloadTime);
+            playerArtilleryReload = false;
+            uiShipReloadStatus.text = "Main Battery : Ready to Fire!";
+            print("ready to fire main battery");
+        }
+
+        /*       float firingdelay = Random.Range(0.05f, 0.2f);
+               yield return new WaitForSeconds(firingdelay);
+               FirePlayerArtillery(); //start firing function
+               uiShipReloadStatus.text = "Main Battery : Reloading";
+               yield return new WaitForSeconds(4);
+               playerArtilleryReload = false;
+               uiShipReloadStatus.text = "Main Battery : Ready to Fire!";
+               print("ready to fire main battery");
+               */
     }
 }
