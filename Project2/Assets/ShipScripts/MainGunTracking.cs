@@ -53,6 +53,7 @@ public class MainGunTracking : MonoBehaviour
     private void FirePlayerArtillery() //fire ship gun
     {
         GameObject firedArtillery = Instantiate(firedShell, playerGunBarrel.position, playerGunBarrel.rotation);
+        print("FIRE!");
         firedArtillery.GetComponent<Rigidbody2D>().velocity = playerGunBarrel.right * 50f;
         //god bless this man
         //https://www.youtube.com/watch?v=01HVr1fp7pU
@@ -64,15 +65,15 @@ public class MainGunTracking : MonoBehaviour
     {
         if (playerReloadTime == 0)
         {
-            uiShipReloadStatus.text = "Main Battery : Ready to Fire!";
+            uiShipReloadStatus.text = "Main Battery Ready to Fire";
             print("ready to fire main battery");
         }
         {
             FirePlayerArtillery(); //start firing function
-            uiShipReloadStatus.text = "Main Battery : Reloading";
+            uiShipReloadStatus.text = "Main Battery Reloading";
             yield return new WaitForSeconds(playerReloadTime);
             playerArtilleryReload = false;
-            uiShipReloadStatus.text = "Main Battery : Ready to Fire!";
+            uiShipReloadStatus.text = "Main Battery Ready to Fire";
             print("ready to fire main battery");
         }
 

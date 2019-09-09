@@ -25,14 +25,14 @@ public class ShipInfoMainBattery : MonoBehaviour
 
     public IEnumerator ReloadTimerText()
     {
-        uiShipReloadStatus.text = "Main Battery : Reloading : 4.0s";
+        uiShipReloadStatus.text = "Main Battery Reloading 4.0s";
         yield return new WaitForSeconds(1);
-        uiShipReloadStatus.text = "Main Battery : Reloading : 3.0s";
+        uiShipReloadStatus.text = "Main Battery Reloading 3.0s";
         yield return new WaitForSeconds(1);
-        uiShipReloadStatus.text = "Main Battery : Reloading : 2.0s";
+        uiShipReloadStatus.text = "Main Battery Reloading 2.0s";
         yield return new WaitForSeconds(1);
-        uiShipReloadStatus.text = "Main Battery : Reloading : 1.0s"; 
+        uiShipReloadStatus.text = "Main Battery Reloading 1.0s"; 
         yield return new WaitForSeconds(1);
-        uiShipReloadStatus.text = "Main Battery : Ready to Fire!";
+        uiShipReloadStatus.text = "Main Battery Ready to Fire!";
     }
 }

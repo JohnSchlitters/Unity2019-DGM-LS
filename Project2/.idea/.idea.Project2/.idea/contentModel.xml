@@ -7,11 +7,13 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="ItemScripts" t="Include">
-          <e p="playerReloadBooster.cs" t="Include" />
+          <e p="detonateAfterTime.cs" t="Include" />
+          <e p="playerDetectPowerup.cs" t="Include" />
         </e>
         <e p="ShipScripts" t="Include">
           <e p="MainGunTracking.cs" t="Include" />
           <e p="ShipMovement.cs" t="Include" />
+          <e p="TorpedoTubeTracking.cs" t="Include" />
         </e>
         <e p="TestScript.cs" t="Include" />
         <e p="UIScripts" t="Include">
