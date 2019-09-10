@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getReloadTime: {fileID: 7032308015738932645}
+  getTorpedoCount: {fileID: 0}
 --- !u!1001 &2366272352697968667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -794,6 +795,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 3063320297855950151, guid: 4828439b515a9e048a6fd5232dbbefab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063320297855950151, guid: 4828439b515a9e048a6fd5232dbbefab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.004
+      objectReference: {fileID: 0}
     - target: {fileID: 6212611396457616975, guid: 4828439b515a9e048a6fd5232dbbefab,
         type: 3}
       propertyPath: launchedTorp
@@ -805,16 +816,6 @@ PrefabInstance:
       propertyPath: playerTorpedoSpoon
       value: 
       objectReference: {fileID: 5095349809029575200}
-    - target: {fileID: 3063320297855950151, guid: 4828439b515a9e048a6fd5232dbbefab,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.106
-      objectReference: {fileID: 0}
-    - target: {fileID: 3063320297855950151, guid: 4828439b515a9e048a6fd5232dbbefab,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.004
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4828439b515a9e048a6fd5232dbbefab, type: 3}
 --- !u!4 &7032308015731536549 stripped
