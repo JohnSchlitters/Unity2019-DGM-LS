@@ -23,7 +23,7 @@ public class ShipInfoMainBattery : MonoBehaviour
         }
     }
 
-    public IEnumerator ReloadTimerText()
+    public IEnumerator ReloadTimerText() //this may all be redundant, need to test
     {
         uiShipReloadStatus.text = "Main Battery Reloading 4.0s";
         yield return new WaitForSeconds(1);

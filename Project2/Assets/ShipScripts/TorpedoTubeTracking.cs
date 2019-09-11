@@ -55,6 +55,7 @@ public class TorpedoTubeTracking : MonoBehaviour
     private void fireTorpedoBattery() //fire torpedo
     {
         GameObject launchedTorpedo = Instantiate(launchedTorp, playerTorpedoSpoon.position, playerTorpedoSpoon.rotation);
+        launchedTorpedo.name = "launchedPlayerTorp";
         print("LAUNCH TORPEDO!");
         launchedTorpedo.GetComponent<Rigidbody2D>().velocity = playerTorpedoSpoon.right * 20f;
         //copied and edited from old script

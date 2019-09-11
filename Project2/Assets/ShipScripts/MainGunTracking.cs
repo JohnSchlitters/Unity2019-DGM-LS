@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
+
 
 public class MainGunTracking : MonoBehaviour
 {
@@ -14,17 +17,22 @@ public class MainGunTracking : MonoBehaviour
     public bool playerArtilleryReload;
     public AudioClip playerGunFire;
     public float playerReloadTime = 4.0f;
+
+
+    
+
     void Start()
     {
         //  Cursor.visible = false; interferes with reticle
         print("starting gun tracking");
         playerArtilleryReload = false;
+        
     }
     void Update()
     {
         //rotation of object
         Vector3 mousePosition = Input.mousePosition;
-        mousePosition.z = 5.23f;
+        mousePosition.z = 0f;
 
         if (Camera.main != null)
         {
@@ -53,6 +61,7 @@ public class MainGunTracking : MonoBehaviour
     private void FirePlayerArtillery() //fire ship gun
     {
         GameObject firedArtillery = Instantiate(firedShell, playerGunBarrel.position, playerGunBarrel.rotation);
+        firedArtillery.name = "firedPlayerShell";
         print("FIRE!");
         firedArtillery.GetComponent<Rigidbody2D>().velocity = playerGunBarrel.right * 50f;
         //god bless this man
@@ -68,7 +77,9 @@ public class MainGunTracking : MonoBehaviour
             uiShipReloadStatus.text = "Main Battery Ready to Fire";
             print("ready to fire main battery");
         }
+        else //for clarity
         {
+            yield return new WaitForSeconds(Random.Range(0.05f, 0.3f));
             FirePlayerArtillery(); //start firing function
             uiShipReloadStatus.text = "Main Battery Reloading";
             yield return new WaitForSeconds(playerReloadTime);
@@ -77,7 +88,7 @@ public class MainGunTracking : MonoBehaviour
             print("ready to fire main battery");
         }
 
-        /*       float firingdelay = Random.Range(0.05f, 0.2f);
+        /*       
                yield return new WaitForSeconds(firingdelay);
                FirePlayerArtillery(); //start firing function
                uiShipReloadStatus.text = "Main Battery : Reloading";

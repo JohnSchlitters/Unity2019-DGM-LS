@@ -3,7 +3,12 @@ guid: d3cb194aa5b604b49a02d9592efc674a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerTorpedoLaunch: {instanceID: 0}
+  - launchedTorp: {fileID: 1716775705808257215, guid: 940622bbc27aae848bfb0ea2a857792d,
+      type: 3}
+  - playerTorpedoSpoon: {instanceID: 0}
+  - uiShipTorpedoStatus: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

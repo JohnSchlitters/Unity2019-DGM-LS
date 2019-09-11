@@ -6,14 +6,21 @@
     <e p="C:\Users\John\Documents\GitKraken\UnityGit\Unity2019-DGM-LS\Project2" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Enemy Scripts" t="Include">
+          <e p="enemyDDController.cs" t="Include" />
+          <e p="enemyHP.cs" t="Include" />
+        </e>
         <e p="ItemScripts" t="Include">
           <e p="detonateAfterTime.cs" t="Include" />
           <e p="playerDetectPowerup.cs" t="Include" />
+          <e p="splashAfterTime.cs" t="Include" />
         </e>
         <e p="ShipScripts" t="Include">
           <e p="MainGunTracking.cs" t="Include" />
+          <e p="shellDamage.cs" t="Include" />
           <e p="ShipIntegrity.cs" t="Include" />
           <e p="ShipMovement.cs" t="Include" />
+          <e p="torpedoDamage.cs" t="Include" />
           <e p="TorpedoTubeTracking.cs" t="Include" />
         </e>
         <e p="TestScript.cs" t="Include" />
