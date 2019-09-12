@@ -61,13 +61,11 @@ public class enemyDDController : MonoBehaviour
                 case 2:
                 case 3:
                 case 4:
-                    print("no power up dropped");
-                    break;
                 case 5:
                 case 6:
                 case 7:
-                    Instantiate(playerPowerUpTorpedo, transform.position, Quaternion.identity);
-                    print("dropped torpedo reload");
+                    Instantiate(playerPowerUpHeal, transform.position, Quaternion.identity);
+                    print("dropped player heal");
                     break;
                 case 8:
                 case 9:
@@ -75,8 +73,8 @@ public class enemyDDController : MonoBehaviour
                     print("dropped gun reload");
                     break;
                 case 10:
-                    Instantiate(playerPowerUpHeal, transform.position, Quaternion.identity);
-                    print("dropped player heal");
+                    Instantiate(playerPowerUpTorpedo, transform.position, Quaternion.identity);
+                    print("dropped torpedo reload");
                     break;
             }
             Destroy(this.gameObject);

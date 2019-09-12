@@ -10,6 +10,7 @@ public class playerDetectPowerup : MonoBehaviour
     public MainGunTracking getReloadTimeB;
     public MainGunTracking getReloadTimeX;
     public TorpedoTubeTracking getTorpedoCount;
+    public ShipIntegrity getPlayerHP;
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class playerDetectPowerup : MonoBehaviour
         if (powerupCollision2D.gameObject.name == "playerPowerUpReload")
         {
             Debug.Log("touched a powerup");
-            StartCoroutine(reloadPowerUp());
+            StartCoroutine(ReloadPowerUp());
             print("starting boosted reload");
             Destroy(powerupCollision2D.gameObject);
             print("destroyed powerup");
@@ -30,14 +31,23 @@ public class playerDetectPowerup : MonoBehaviour
         if (powerupCollision2D.gameObject.name == "playerPowerUpTorpedo")
         {
             Debug.Log("touched a powerup");
-            torpedoPowerUp();
+            TorpedoPowerUp();
             print("starting torpedo boost");
+            Destroy(powerupCollision2D.gameObject);
+            print("destroyed powerup");
+        }
+
+        if (powerupCollision2D.gameObject.name == "playerPowerUpHeal")
+        {
+            Debug.Log("touched a powerup");
+            RepairPowerUp();
+            print("starting repair function");
             Destroy(powerupCollision2D.gameObject);
             print("destroyed powerup");
         }
     }
 
-    private IEnumerator reloadPowerUp()
+    private IEnumerator ReloadPowerUp()
     {
         getReloadTimeA.playerArtilleryReload = false;
         getReloadTimeB.playerArtilleryReload = false;
@@ -54,7 +64,7 @@ public class playerDetectPowerup : MonoBehaviour
         print("player reload returned to normal");
     }
 
-    public void torpedoPowerUp()
+    public void TorpedoPowerUp()
     {
         StopCoroutine(getTorpedoCount.playerTorpedoReloadFunc());
         print("canceled current reload function");
@@ -63,4 +73,12 @@ public class playerDetectPowerup : MonoBehaviour
         print("fully reloaded torpedo tube");
     }
 
+    public void RepairPowerUp()
+    {
+        for (int repairTick = 4; repairTick > 0; repairTick--)
+        {
+            getPlayerHP.playerShipIntegrity += 100;
+            print("added 100 to player HP");
+        }
+    }
 }
