@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class detonateAfterTime : MonoBehaviour
+public class splashAfterTime : MonoBehaviour
 {
     // Start is called before the first frame update
     public void Start()
     {
-        StartCoroutine(torpedoFuelTimeout());
+        StartCoroutine(artillerySplashDown());
 
     }
 
-    public IEnumerator torpedoFuelTimeout()
+    public IEnumerator artillerySplashDown()
     {
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(10f);
         Destroy(this.gameObject);
-        print("A torpedo ran out of fuel");
+        print("A shell has hit the water");
     }
 }
