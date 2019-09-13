@@ -9,6 +9,8 @@
         <e p="Enemy Scripts" t="Include">
           <e p="enemyDDController.cs" t="Include" />
           <e p="enemyHP.cs" t="Include" />
+          <e p="shoreAI.cs" t="Include" />
+          <e p="shoreBatteryTrack.cs" t="Include" />
         </e>
         <e p="ItemScripts" t="Include">
           <e p="detonateAfterTime.cs" t="Include" />
@@ -26,6 +28,7 @@
         <e p="TestScript.cs" t="Include" />
         <e p="UIScripts" t="Include">
           <e p="CameraTrack.cs" t="Include" />
+          <e p="ShipInfoHPArmor.cs" t="Include" />
           <e p="ShipInfoMainBattery.cs" t="Include" />
           <e p="ShipInfoSpeed.cs" t="Include" />
         </e>

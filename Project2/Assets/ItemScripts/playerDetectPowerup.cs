@@ -77,8 +77,16 @@ public class playerDetectPowerup : MonoBehaviour
     {
         for (int repairTick = 4; repairTick > 0; repairTick--)
         {
-            getPlayerHP.playerShipIntegrity += 100;
-            print("added 100 to player HP");
+            if (getPlayerHP.playerShipIntegrity < getPlayerHP.playerMaxShipIntegrity)
+            {
+                getPlayerHP.playerShipIntegrity += 100;
+                print("added 100 to player HP");
+            }
+            else
+            {
+                getPlayerHP.playerArmor = +50;
+                print("added 50 armor to player");
+            }
         }
     }
 }

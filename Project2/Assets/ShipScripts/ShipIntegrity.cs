@@ -29,9 +29,9 @@ public class ShipIntegrity : MonoBehaviour
             print("player has been sunk");
         }
 
-        if (playerShipIntegrity >= playerMaxShipIntegrity)
+        if (playerShipIntegrity > playerMaxShipIntegrity)
         {
-            if (playerArmor <= playerMaxArmor)
+            if (playerArmor < playerMaxArmor)
             {
                 playerArmor = playerMaxArmor + (playerShipIntegrity - playerMaxShipIntegrity);
                 print("player armor set to " + playerArmor);
@@ -43,6 +43,10 @@ public class ShipIntegrity : MonoBehaviour
             }
 
             playerShipIntegrity = playerMaxShipIntegrity;
+        }
+        else if (playerShipIntegrity <= playerMaxShipIntegrity)
+        {
+            print("player integrity at " + playerShipIntegrity);
         }
     }
 

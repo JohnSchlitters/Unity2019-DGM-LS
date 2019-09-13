@@ -64,16 +64,19 @@ public class enemyDDController : MonoBehaviour
                 case 5:
                 case 6:
                 case 7:
-                    Instantiate(playerPowerUpHeal, transform.position, Quaternion.identity);
+                    GameObject playerPowerUpHealDrop = Instantiate(playerPowerUpHeal, transform.position, Quaternion.identity);
+                    playerPowerUpHealDrop.name = "playerPowerUpHeal";
                     print("dropped player heal");
                     break;
                 case 8:
                 case 9:
-                    Instantiate(playerPowerUpReload, transform.position, Quaternion.identity);
+                    GameObject playerPowerUpReloadDrop = Instantiate(playerPowerUpReload, transform.position, Quaternion.identity);
+                    playerPowerUpReloadDrop.name = "playerPowerUpReload";
                     print("dropped gun reload");
                     break;
                 case 10:
-                    Instantiate(playerPowerUpTorpedo, transform.position, Quaternion.identity);
+                    GameObject playerPowerUpTorpedoDrop = Instantiate(playerPowerUpTorpedo, transform.position, Quaternion.identity);
+                    playerPowerUpTorpedoDrop.name = "playerPowerUpTorpedo";
                     print("dropped torpedo reload");
                     break;
             }
