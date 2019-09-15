@@ -360,7 +360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 404400177}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: enemyBatteryBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404400176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.155, y: 0, z: 0}
+  m_LocalPosition: {x: -0.293, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1239810182}
@@ -459,6 +459,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1936C_Ship_Sprite_Full
       objectReference: {fileID: 0}
+    - target: {fileID: 7710499682819259637, guid: d0c5ac63152fb2e44af8b346fa9ff764,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6048050272482923299, guid: d0c5ac63152fb2e44af8b346fa9ff764,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -514,17 +519,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 803180566, guid: d0c5ac63152fb2e44af8b346fa9ff764, type: 3}
-      propertyPath: m_UseAutoMass
-      value: 1
+    - target: {fileID: 6093357370230163803, guid: d0c5ac63152fb2e44af8b346fa9ff764,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 803180566, guid: d0c5ac63152fb2e44af8b346fa9ff764, type: 3}
-      propertyPath: m_Mass
-      value: 35.90472
+    - target: {fileID: 1147799596684346324, guid: d0c5ac63152fb2e44af8b346fa9ff764,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 803180568, guid: d0c5ac63152fb2e44af8b346fa9ff764, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 2053547950606979205, guid: d0c5ac63152fb2e44af8b346fa9ff764,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045212717184431813, guid: d0c5ac63152fb2e44af8b346fa9ff764,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1056267937164647925, guid: d0c5ac63152fb2e44af8b346fa9ff764,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292187081476620954, guid: d0c5ac63152fb2e44af8b346fa9ff764,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331390323758164130, guid: d0c5ac63152fb2e44af8b346fa9ff764,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235902311247343348, guid: d0c5ac63152fb2e44af8b346fa9ff764,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690250816875541792, guid: d0c5ac63152fb2e44af8b346fa9ff764,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0c5ac63152fb2e44af8b346fa9ff764, type: 3}
@@ -1298,8 +1336,8 @@ GameObject:
   - component: {fileID: 1239810184}
   - component: {fileID: 1239810186}
   - component: {fileID: 1239810185}
-  m_Layer: 0
-  m_Name: enemy_shoreartillery
+  m_Layer: 11
+  m_Name: enemy_shoreartillery_radius
   m_TagString: EnemyShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1323,7 +1361,7 @@ MonoBehaviour:
     type: 3}
   batteryReloadStatus: 0
   playerDistance: 0
-  targetRange: 75
+  targetRange: 60
   enemyBatteryFire: {fileID: 8300000, guid: a32115ecc74032143b3d2d3fdb3d025c, type: 3}
   batteryReloadTime: 6
   enemyGunBarrel: {fileID: 404400177}
@@ -1629,7 +1667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1715837256}
   - component: {fileID: 1715837255}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy_Battery_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1981,11 +2019,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: player_shipLaforey
       objectReference: {fileID: 0}
-    - target: {fileID: 4180159681397471528, guid: 0c84c556e650e164592147651ee91a4a,
+    - target: {fileID: 7032308015877104961, guid: 0c84c556e650e164592147651ee91a4a,
         type: 3}
-      propertyPath: uiShipTorpedoStatus
-      value: 
-      objectReference: {fileID: 143445830}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 7032308015877104963, guid: 0c84c556e650e164592147651ee91a4a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2041,6 +2079,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4180159681397471528, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: uiShipTorpedoStatus
+      value: 
+      objectReference: {fileID: 143445830}
     - target: {fileID: 7032308015877104964, guid: 0c84c556e650e164592147651ee91a4a,
         type: 3}
       propertyPath: uiShipText
@@ -2076,6 +2119,61 @@ PrefabInstance:
     - target: {fileID: 1917534896, guid: 0c84c556e650e164592147651ee91a4a, type: 3}
       propertyPath: m_Mass
       value: 30.026695
+      objectReference: {fileID: 0}
+    - target: {fileID: 211280725222834104, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032308015039150698, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032308015707024706, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032308015731536546, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032308015738932640, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068984139045748245, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020065131991458659, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 211280725358634335, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034779620135225241, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032308016412628807, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068984140520580338, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c84c556e650e164592147651ee91a4a, type: 3}

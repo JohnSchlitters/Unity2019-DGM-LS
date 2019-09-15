@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Animations;
+using UnityEngine.Experimental.PlayerLoop;
 
 public class shoreBatteryTrack : MonoBehaviour
 {
@@ -9,7 +12,7 @@ public class shoreBatteryTrack : MonoBehaviour
     public GameObject firedBatteryArtillery;
     public bool batteryReloadStatus = false;
     public float playerDistance;
-    public float targetRange = 70f;
+    public float targetRange;
     public AudioClip enemyBatteryFire;
     public int batteryReloadTime;
     [SerializeField]
@@ -28,18 +31,18 @@ public class shoreBatteryTrack : MonoBehaviour
 
     void Update()
     {
-        playerDistance = Vector3.Distance(playerTarget.position, batteryLocation.position);
-        var lookDir = playerTarget.position-transform.position;
-        lookDir.y = 0; // keep only the horizontal direction
-        lookDir.z = 0;
-        
+        playerDistance = Vector3.Distance(playerTarget.transform.position, batteryLocation.transform.position);
         if (playerDistance < targetRange)
         {
-           
-            transform.rotation = Quaternion.LookRotation(lookDir);
+            Vector3 diff = playerTarget.position - batteryLocation.position;
+            diff.Normalize();
+            float rotationZ = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+            batteryLocation.rotation = Quaternion.Euler(0f,0f,rotationZ - 180);
             print("player in range");
-            if (batteryReloadStatus == true)
+            if (batteryReloadStatus == false)
             {
+                BatteryShootAtPlayer();
+                batteryReloadStatus = true;
                 StartCoroutine(BatteryReloadFunction());
             }
         }
@@ -53,21 +56,12 @@ public class shoreBatteryTrack : MonoBehaviour
         print("firing enemy battery!");
         batteryArtillery.GetComponent<Rigidbody2D>().velocity = enemyGunBarrel.right * 50f;
         AudioSource.PlayClipAtPoint(enemyBatteryFire, transform.position);
-        batteryReloadStatus = true;
     }
 
     public IEnumerator BatteryReloadFunction() //reload battery gun to make survival possible
     {
-        if (batteryReloadTime == 0)
-        {
-            print("battery reloading");
-        }
-        else //for clarity
-        {
-            print("reloading enemy battery");
-            BatteryShootAtPlayer();
-            yield return new WaitForSeconds(6);
-            batteryReloadStatus = false;
-        }
+        print("battery reloading");
+        yield return new WaitForSeconds(batteryReloadTime);
+        batteryReloadStatus = false;
     }
 }

@@ -8,6 +8,8 @@ TagManager:
   - Islands
   - EnemyShip
   - PowerUp
+  - PowerUps
+  - Projectiles
   layers:
   - Default
   - TransparentFX
@@ -17,11 +19,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Powerups
+  - ProjectilesPlayer
+  - ProjectilesEnemy
+  - EnemyUnit
+  - PlayerUnit
   - 
   - 
   - 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1716775705808257212}
   - component: {fileID: 5847512837836290744}
   - component: {fileID: 4465352522824617828}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: launchedTorpedo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1716775706671330622}
   - component: {fileID: 1716775706671330621}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TorpedoWake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
