@@ -54,7 +54,7 @@ public class shoreBatteryTrack : MonoBehaviour
         GameObject batteryArtillery = Instantiate(firedBatteryArtillery, enemyGunBarrel.position, enemyGunBarrel.rotation);
         batteryArtillery.name = "firedBatteryShell";
         print("firing enemy battery!");
-        batteryArtillery.GetComponent<Rigidbody2D>().velocity = enemyGunBarrel.right * 50f;
+        batteryArtillery.GetComponent<Rigidbody2D>().velocity = enemyGunBarrel.right * -40f;
         AudioSource.PlayClipAtPoint(enemyBatteryFire, transform.position);
     }
 

@@ -49,6 +49,39 @@ public class ShipIntegrity : MonoBehaviour
             print("player integrity at " + playerShipIntegrity);
         }
     }
+    private void OnCollisionEnter2D(Collision2D enemyAttackCollision2D)
+    {
+        if (enemyAttackCollision2D.gameObject.name == "launchedEnemyTorp")
+        {
+            print("enemy hit with torpedo");
+            Destroy(enemyAttackCollision2D.gameObject);
+            if (playerArmor > 0)
+            {
+                playerArmor -= 100;
+            }
+            else
+            {
+                playerShipIntegrity -= 200;                
+            }
+            print("player ship hp at " + playerShipIntegrity);
+        }
+
+        if (enemyAttackCollision2D.gameObject.name == "firedBatteryShell")
+        {
+            print("enemy hit with shell");
+            Destroy(enemyAttackCollision2D.gameObject);
+            if (playerArmor > 0)
+            {
+                playerArmor -= 50;
+            }
+            else
+            {
+                playerShipIntegrity -= 100;                
+            }
+
+            print("player ship hp at " + playerShipIntegrity);
+        }
+    }
 
     void PlayerSunk()
     {
