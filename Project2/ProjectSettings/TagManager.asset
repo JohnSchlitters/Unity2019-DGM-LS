@@ -10,6 +10,7 @@ TagManager:
   - PowerUp
   - PowerUps
   - Projectiles
+  - EnemyPlane
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - ProjectilesEnemy
   - EnemyUnit
   - PlayerUnit
-  - 
+  - EnemyPlane
   - 
   - 
   - 
