@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 53413653}
   - component: {fileID: 53413652}
   - component: {fileID: 53413651}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Enemy_Plane_1
   m_TagString: EnemyPlane
   m_Icon: {fileID: 0}
@@ -575,6 +575,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &583768814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3020065131991458659, guid: 0c84c556e650e164592147651ee91a4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7032308016477344113}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &583768816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583768814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d583e0d1b49ad4547b5d676dcbc167a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aaGunBarrel: {fileID: 1111066271}
 --- !u!1001 &605298165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1352,6 +1371,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiShipText: {fileID: 1097204957}
   getShipGear: {fileID: 1816081459}
+--- !u!4 &1111066271 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 62129441754557013, guid: 0c84c556e650e164592147651ee91a4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7032308016477344113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1166404417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,6 +2353,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101551743377699474, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101551743377699474, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101551743377699474, guid: 0c84c556e650e164592147651ee91a4a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c84c556e650e164592147651ee91a4a, type: 3}
